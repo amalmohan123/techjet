@@ -4,8 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:minnal/service/google_service.dart';
 
 class AuthProvider extends ChangeNotifier {
-
-FirebaseAuthService authservices =FirebaseAuthService();
+  FirebaseAuthService authservices = FirebaseAuthService();
 
   User? _user;
 
@@ -19,14 +18,10 @@ FirebaseAuthService authservices =FirebaseAuthService();
 
   Future<UserCredential> signInWithGoogle() async {
     return authservices.signInWithGoogle();
-
   }
-    Future<void> signOut() async {
+
+  Future<void> signOut() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signOut();
-     FirebaseAuth.instance.signOut();
-    
+    FirebaseAuth.instance.signOut();
   }
-  
-  
-
 }
