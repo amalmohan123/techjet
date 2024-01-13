@@ -8,6 +8,11 @@ import 'package:provider/provider.dart';
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
 
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
